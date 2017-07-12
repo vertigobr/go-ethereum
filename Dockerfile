@@ -1,7 +1,10 @@
 FROM alpine:3.5 as builder
 
 ADD . /go-ethereum
-ARG MAKE_TARGET=geth
+
+# target=all instead of geth
+ARG MAKE_TARGET=all
+
 RUN \
   apk add --update git go make gcc musl-dev linux-headers && \
   (cd go-ethereum && make $MAKE_TARGET)                   && \
