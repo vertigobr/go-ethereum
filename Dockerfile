@@ -9,9 +9,6 @@ RUN \
   apk add --update git go make gcc musl-dev linux-headers && \
   (cd go-ethereum && make $MAKE_TARGET)                   && \
   echo "Dockerfile builder stage finished."
-#  cp go-ethereum/build/bin/geth /usr/local/bin/           && \
-#  apk del git go make gcc musl-dev linux-headers         && \
-#  rm -rf /go-ethereum && rm -rf /var/cache/apk/*
 
 FROM alpine:3.5
 
