@@ -8,7 +8,7 @@ ARG MAKE_TARGET=all
 RUN \
   apk add --update git go make gcc musl-dev linux-headers && \
   (cd go-ethereum && make $MAKE_TARGET)                   && \
-  echo "Dockerfile builder stage finished."
+  echo "Dockerfile builder stage finished"
 
 FROM alpine:3.5
 
