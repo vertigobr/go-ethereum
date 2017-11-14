@@ -72,13 +72,18 @@ var AppHelpFlagGroups = []flagGroup{
 			utils.NetworkIdFlag,
 			utils.TestnetFlag,
 			utils.RinkebyFlag,
-			utils.DevModeFlag,
 			utils.SyncModeFlag,
 			utils.EthStatsURLFlag,
 			utils.IdentityFlag,
 			utils.LightServFlag,
 			utils.LightPeersFlag,
 			utils.LightKDFFlag,
+		},
+	},
+	{Name: "DEVELOPER CHAIN",
+		Flags: []cli.Flag{
+			utils.DeveloperFlag,
+			utils.DeveloperPeriodFlag,
 		},
 	},
 	{
@@ -96,6 +101,8 @@ var AppHelpFlagGroups = []flagGroup{
 		Name: "TRANSACTION POOL",
 		Flags: []cli.Flag{
 			utils.TxPoolNoLocalsFlag,
+			utils.TxPoolJournalFlag,
+			utils.TxPoolRejournalFlag,
 			utils.TxPoolPriceLimitFlag,
 			utils.TxPoolPriceBumpFlag,
 			utils.TxPoolAccountSlotsFlag,
